@@ -7,7 +7,7 @@
       ios_interfaces:
         config:
           - name: "{{ item.name }}"
-            enable: True
+            enabled: True
         state: merged
       loop: "{{ interfaces }}"
 
