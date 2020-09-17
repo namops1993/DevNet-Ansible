@@ -3,8 +3,7 @@
   hosts: devices
   gather_facts: false
   connection: network_cli
-
-  task:
+  tasks:
     - name: Turn on Interface
       ios_interfaces:
         config:
