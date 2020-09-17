@@ -12,7 +12,7 @@
       loop: "{{ interfaces }}"
 
     - name: Configure interface
-      ios_l3_interfaces:
+      ios_l3_interface:
         config:
           - name: "{{ item.name }}"
             ipv4:
