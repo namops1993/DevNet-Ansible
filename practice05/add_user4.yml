@@ -1,0 +1,12 @@
+---
+- name: Add User
+  hosts: nginx
+  connection: ssh
+  remote_user: root
+  tasks:
+    - name: Add users to Nginx server
+      user:
+        name: "{{ item.name }}"
+        state: present
+        group: "{{ item.group }}"
+      loop: "{{ list_user }}"

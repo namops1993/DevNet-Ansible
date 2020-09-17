@@ -1,0 +1,8 @@
+[nginx]
+Server_Nginx ansible_host=192.168.10.10
+
+[all:vars]
+ansible_port=22
+ansible_user=root
+ansible_password=123456
+

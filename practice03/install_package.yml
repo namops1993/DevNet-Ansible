@@ -1,0 +1,23 @@
+---
+- name: Install Nginx
+  hosts: nginx
+  connection: ssh
+  remote_user: root
+  tasks:
+    - name: Install Nginx
+      yum:
+        name: httpd
+        state: present
+    - name: Ensure httpd is running
+      service:
+        name: httpd
+        state: started
+- name: Install ABC
+  hosts: abc
+  connection: ssh
+  remote_user: root
+  task:
+    - name: Install something
+      yum:
+        name: abc
+        state: present

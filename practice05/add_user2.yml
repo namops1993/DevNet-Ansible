@@ -1,0 +1,16 @@
+---
+- name: Add User
+  hosts: nginx
+  connection: ssh
+  remote_user: root
+  tasks:
+    - name: Add users to Nginx server
+      user:
+        name: "manh"
+        state: present
+        group: "ansible"
+    - name: Add users to Nginx server
+      user:
+        name: "nam"
+        state: present
+        group: "ansible"

@@ -1,0 +1,2 @@
+ansible_user: juniper
+ansible_network_os: junos

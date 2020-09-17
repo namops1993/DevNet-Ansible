@@ -1,0 +1,19 @@
+[cisco]
+R1 ansible_host=192.168.1.10
+R2 ansible_host=192.168.1.11
+
+[juniper]
+R3 ansible_host=192.168.1.10
+R4 ansible_host=192.168.1.11
+
+
+[cisco:vars]
+ansible_user=cisco
+ansible_network_os=ios
+
+[juniper:vars]
+ansible_user=juniper
+ansible_network_os=junos
+
+[all:vars]
+ansible_port=22

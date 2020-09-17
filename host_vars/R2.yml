@@ -1,4 +1,0 @@
-interfaces:
-  - name: Ethernet0/0
-    description: Link to R1 configured by Ansible
-    ipv4: 200.100.1.2/24

@@ -1,0 +1,15 @@
+[nginx]
+Server_Nginx ansible_host=192.168.10.10
+
+[abc]
+Server_ABC01 ansible_host=192.168.10.20
+Server_ABC02 ansible_host=192.168.10.30
+
+
+[all:vars]
+ansible_port=22
+ansible_user=root
+ansible_password=123456
+
+[abc:vars]
+ansible_user=abc_user
