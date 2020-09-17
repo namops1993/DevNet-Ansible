@@ -1,0 +1,23 @@
+---
+- name: Connecting device
+  hosts: devices
+  gather_facts: false
+  connection: network_cli
+
+  task:
+    - name: Turn on Interface
+      ios_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            enable: True
+        state: merged
+      loop: "{{ interfaces }}"
+
+    - name: Configure interface
+      ios_l3_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            ipv4:
+              - address: "{{ item.ipv4 }}"
+        stage: merged
+      loop: "{{ interfaces }}"
