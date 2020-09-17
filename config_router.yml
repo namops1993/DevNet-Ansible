@@ -15,5 +15,4 @@
       ios_l3_interface:
         name: "{{ item.name }}"
         ipv4: "{{ item.ipv4 }}"
-        stage: present
       loop: "{{ interfaces }}"
