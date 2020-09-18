@@ -1,0 +1,14 @@
+---
+- name: Connecting device
+  hosts: devices
+  connection: network_cli
+  tasks:
+    - name: Turn on Interface
+      ios_interfaces:
+        config:
+          - name: "Ethernet0/2"
+            description: "Enable interface"
+            enabled: True
+        state: merged
+
+
