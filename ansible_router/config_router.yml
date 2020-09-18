@@ -1,6 +1,6 @@
 ---
 - name: Connecting device
-  hosts: devices
+  hosts: juniper
   connection: network_cli
   tasks:
     - name: Turn on Interface
