@@ -1,0 +1,12 @@
+---
+- name: Add User
+  hosts: nginx
+  connection: ssh
+  remote_user: root
+  tasks:
+    - name: Shutdown CentOS 6 system
+      command: /sbin/shutdown -h now
+      when:
+        - ansible_facts['distribution'] == "CentOS"
+        - ansible_facts['distribution_major_version'] == "6"
+    

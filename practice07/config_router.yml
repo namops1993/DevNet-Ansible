@@ -1,0 +1,11 @@
+---
+- name: Get Router Info
+  hosts: cisco
+  connection: network_cli
+  tasks:
+    - name: Run command
+      register: command_out
+      ios_command:
+        commands: 'show ip int brief'
+    - debug:
+        var: command_out
